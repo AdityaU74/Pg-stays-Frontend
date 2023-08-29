@@ -15,6 +15,12 @@ import BookingPage from "./pages/BookingPage";
 
 axios.defaults.baseURL = 'https://pg-stays-backend-production.up.railway.app/api'
 axios.defaults.withCredentials = true;
+axios.get('https://pg-stays-backend-production.up.railway.app/',{
+  headers:{
+    'Access-Control-Allow-Origin' : '*',
+  'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+  },
+})
 
 function App() {
   return (
